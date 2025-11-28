@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Open Eyed Man – New Year’s Eve Banquet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="New Year’s Eve banquet at The Open Eyed Man – four-course menu with drinks included." />
+  <style>
+    :root {
+      --bg: #f9f5f0;
+      --primary: #3c4a3e;
+      --accent: #c0954f;
+      --text: #222222;
+      --card-bg: #ffffff;
+      --border: #ddd0c0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 0.5rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+
+    a.button.secondary {
+      background: transparent;
+      color: var(--primary);
+    }
+
+    header {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 0.75rem 1rem;
+    }
+
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 0.75rem;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 999px;
+    }
+
+    nav a:focus-visible,
+    nav a:hover {
+      outline: 2px solid #ffffff;
+      outline-offset: 2px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 1.5rem auto 2.5rem;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .meta {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1rem;
+      border: 1px solid var(--border);
+      margin-top: 1rem;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      margin-bottom: 0.25rem;
+    }
+
+    ul.menu-list {
+      padding-left: 1.2rem;
+      margin: 0.25rem 0 0.5rem;
+    }
+
+    ul.menu-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    .price {
+      font-weight: 600;
+      margin-top: 0.75rem;
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 0.4rem;
+    }
+
+    footer {
+      background: #2f3830;
+      color: #f2f2f2;
+      padding: 1.25rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="brand-name">The Open Eyed Man</div>
+      <nav aria-label="Page navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="christmas-lunch.html">Christmas Day</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>New Year’s Eve Banquet</h1>
+    <p class="meta">
+      Four-course celebration with drinks included · £120 per person
+    </p>
+
+    <p>
+      Ring in the New Year with a banquet that leans heavily on local producers, generous
+      pours and relaxed, unhurried service. The ticket price includes an arrival cocktail,
+      paired drinks with your meal and a midnight toast.
+    </p>
+
+    <div class="card">
+      <h2>Arrival &amp; Grazing</h2>
+      <ul class="menu-list">
+        <li>Welcome cocktail: Winter martini with local vodka, apple and rosemary</li>
+        <li>Charcuterie and local cheese platters with pickles and artisan breads</li>
+        <li>Roasted nuts with winter spices</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Starter</h2>
+      <ul class="menu-list">
+        <li>Seared scallops with cauliflower purée and smoked bacon crumb</li>
+        <li>Vegetarian option: Roast cauliflower steak with hazelnut crumb (v)</li>
+      </ul>
+      <p class="note">
+        Served with a glass of local white wine or a non-alcoholic elderflower fizz.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Main Courses</h2>
+      <p>Choose one:</p>
+      <ul class="menu-list">
+        <li>Venison loin, red wine jus, beetroot textures, potato fondant</li>
+        <li>Herb-crusted cod, mussel and saffron velouté, winter greens</li>
+        <li>Wild mushroom and truffle pithivier, parsnip cream, wilted greens (v)</li>
+      </ul>
+      <p class="note">
+        Each main is paired with a curated glass of wine, beer or a well-made non-alcoholic alternative.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Dessert &amp; Midnight Toast</h2>
+      <ul class="menu-list">
+        <li>Dark chocolate torte with salted honeycomb, crème fraîche</li>
+        <li>Alternative: Poached pear with spiced syrup and vanilla mascarpone</li>
+      </ul>
+      <p>At midnight:</p>
+      <ul class="menu-list">
+        <li>Glass of English sparkling wine or non-alcoholic sparkling pressé</li>
+        <li>Late-night cheese and biscuit board for the table</li>
+      </ul>
+    </div>
+
+    <p class="price">
+      Guide price: £120 per person including arrival cocktail, paired drinks, midnight toast and table water.
+    </p>
+
+    <p>
+      <a
+        class="button"
+        href="mailto:bookings@openeyedman.pub?subject=Tickets%20-%20New%20Year%27s%20Eve%20Banquet&body=Please%20include%20your%20name%2C%20number%20of%20tickets%2C%20and%20any%20dietary%20or%20access%20requirements."
+      >
+        Enquire about New Year’s Eve tickets
+      </a>
+      <a class="button secondary" href="index.html#food">Back to Our Food</a>
+    </p>
+
+    <p class="note">
+      New Year’s Eve is a ticketed event with limited seating. A deposit or full prepayment
+      may be required – we’ll confirm all details when you enquire.
+    </p>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      &copy; <span id="year"></span> The Open Eyed Man · New year, same village pub.
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var yearElement = document.getElementById("year");
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</body>
+</html>

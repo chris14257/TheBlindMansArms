@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Open Eyed Man – Christmas Day Lunch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Christmas Day lunch at The Open Eyed Man – locally sourced festive menu in a Wiltshire village pub." />
+  <style>
+    :root {
+      --bg: #f9f5f0;
+      --primary: #3c4a3e;
+      --accent: #c0954f;
+      --text: #222222;
+      --card-bg: #ffffff;
+      --border: #ddd0c0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 0.5rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+
+    a.button.secondary {
+      background: transparent;
+      color: var(--primary);
+    }
+
+    header {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 0.75rem 1rem;
+    }
+
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 0.75rem;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 999px;
+    }
+
+    nav a:focus-visible,
+    nav a:hover {
+      outline: 2px solid #ffffff;
+      outline-offset: 2px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 1.5rem auto 2.5rem;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .meta {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1rem;
+      border: 1px solid var(--border);
+      margin-top: 1rem;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      margin-bottom: 0.25rem;
+    }
+
+    ul.menu-list {
+      padding-left: 1.2rem;
+      margin: 0.25rem 0 0.5rem;
+    }
+
+    ul.menu-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    .price {
+      font-weight: 600;
+      margin-top: 0.75rem;
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 0.4rem;
+    }
+
+    footer {
+      background: #2f3830;
+      color: #f2f2f2;
+      padding: 1.25rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="brand-name">The Open Eyed Man</div>
+      <nav aria-label="Page navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="new-years-eve-banquet.html">New Year’s Eve</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Christmas Day Lunch</h1>
+    <p class="meta">
+      A locally sourced festive feast at The Open Eyed Man · £60 per person (food only)
+    </p>
+
+    <p>
+      Christmas Day is all about generous plates, familiar flavours and a few small surprises.
+      Our menu celebrates Wiltshire farms and producers, with options for meat-eaters and
+      vegetarians alike.
+    </p>
+
+    <div class="card">
+      <h2>Arrival</h2>
+      <ul class="menu-list">
+        <li>Warm spiced apple cordial with cinnamon</li>
+        <li>Honey-rosemary bread with whipped salted butter</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Starters</h2>
+      <p>Choose one:</p>
+      <ul class="menu-list">
+        <li>Wiltshire game terrine, cranberry gel, toasted brioche</li>
+        <li>Roasted parsnip and celeriac soup, truffle oil, sourdough</li>
+        <li>Smoked chalk-stream trout, pickled cucumber, dill crème fraîche</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Mains</h2>
+      <p>Choose one:</p>
+      <ul class="menu-list">
+        <li>
+          Free-range bronze turkey, chestnut and herb stuffing, roast potatoes,
+          heritage vegetables, rich turkey gravy
+        </li>
+        <li>
+          Slow-roasted beef rib, thyme jus, Yorkshire pudding, duck-fat potatoes,
+          winter greens
+        </li>
+        <li>
+          Butternut squash, sage and hazelnut wellington, Wiltshire blue glaze,
+          roasted roots (v)
+        </li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Desserts &amp; Finish</h2>
+      <p>Desserts – choose one:</p>
+      <ul class="menu-list">
+        <li>Traditional Christmas pudding with brandy cream</li>
+        <li>Apple and Calvados tart with vanilla custard</li>
+        <li>Local cheese selection with crackers and chutney</li>
+      </ul>
+      <p>To finish:</p>
+      <ul class="menu-list">
+        <li>Handmade chocolates</li>
+        <li>Freshly brewed coffee or loose-leaf tea</li>
+      </ul>
+    </div>
+
+    <p class="price">
+      Guide price: £59 per person for food, within a £60 per head budget (excluding wine and other drinks).
+    </p>
+
+    <p>
+      <a
+        class="button"
+        href="mailto:bookings@openeyedman.pub?subject=Reservation%20-%20Christmas%20Day%20Lunch&body=Please%20include%20your%20preferred%20sitting%20time%2C%20number%20of%20guests%2C%20and%20any%20dietary%20or%20access%20requirements."
+      >
+        Reserve Christmas Day Lunch
+      </a>
+      <a class="button secondary" href="index.html#food">Back to Our Food</a>
+    </p>
+
+    <p class="note">
+      A deposit may be required for Christmas Day bookings. We’ll confirm timings, seating details
+      and any special requirements by email.
+    </p>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      &copy; <span id="year"></span> The Open Eyed Man · Christmas at your village pub.
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var yearElement = document.getElementById("year");
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</body>
+</html>
