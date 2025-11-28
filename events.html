@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Open Eyed Man – Events</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Craft workshops and events at The Open Eyed Man – December workshops in a Wiltshire village pub." />
+  <style>
+    :root {
+      --bg: #f9f5f0;
+      --primary: #3c4a3e;
+      --accent: #c0954f;
+      --text: #222222;
+      --card-bg: #ffffff;
+      --border: #ddd0c0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 0.5rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+
+    a.button.secondary {
+      background: transparent;
+      color: var(--primary);
+    }
+
+    header {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 0.75rem 1rem;
+    }
+
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 0.75rem;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 999px;
+    }
+
+    nav a:focus-visible,
+    nav a:hover {
+      outline: 2px solid #ffffff;
+      outline-offset: 2px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 1.5rem auto 2.5rem;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .meta {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1rem;
+    }
+
+    @media (min-width: 700px) {
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1rem;
+      border: 1px solid var(--border);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .price {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-top: 0.25rem;
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 0.4rem;
+    }
+
+    footer {
+      background: #2f3830;
+      color: #f2f2f2;
+      padding: 1.25rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="brand-name">The Open Eyed Man</div>
+      <nav aria-label="Page navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="christmas-lunch.html">Christmas Day</a></li>
+          <li><a href="new-years-eve-banquet.html">New Year's Eve</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>December Craft Workshops</h1>
+    <p class="meta">
+      Wednesdays and Saturdays · 3pm–6pm · Max £40 per person including materials and refreshments
+    </p>
+
+    <p>
+      Throughout December we host craft workshops on <strong>Wednesdays and Saturdays</strong>,
+      <strong>3pm–6pm</strong>. Each session keeps within a maximum of <strong>£40 per person</strong>,
+      including tuition, materials and a festive snack and soft drink.
+    </p>
+
+    <div class="grid grid-2" style="margin-top: 1.5rem;">
+      <!-- Week 1 -->
+      <article class="card">
+        <h2>Wiltshire Wreath-Making</h2>
+        <p class="meta">
+          Wednesday 4 December · 3pm–6pm
+        </p>
+        <p>
+          Build a festive wreath using greenery, berries and seed heads inspired by
+          local hedgerows and woodland. All materials supplied.
+        </p>
+        <p class="price">£35 per person</p>
+        <a
+          class="button"
+          href="mailto:bookings@openeyedman.pub?subject=Booking%20Enquiry%20-%20Wiltshire%20Wreath-Making%20(4%20Dec)&body=Please%20include%20your%20name%2C%20number%20of%20guests%20and%20any%20access%20requirements."
+        >
+          Book wreath-making (4 Dec)
+        </a>
+      </article>
+
+      <article class="card">
+        <h2>Hand-Poured Winter Candle Workshop</h2>
+        <p class="meta">
+          Saturday 7 December · 3pm–6pm
+        </p>
+        <p>
+          Blend and pour your own soy candles in fragrances like Winter Fir,
+          Mulled Spice and Orange Clove. Leave with two candles to keep or gift.
+        </p>
+        <p class="price">£35 per person</p>
+        <a
+          class="button"
+          href="mailto:bookings@openeyedman.pub?subject=Booking%20Enquiry%20-%20Candle%20Workshop%20(7%20Dec)&body=Please%20include%20your%20name%2C%20number%20of%20guests%20and%20any%20access%20requirements."
+        >
+          Book candle workshop (7 Dec)
+        </a>
+      </article>
+
+      <!-- Week 2 -->
+      <article class="card">
+        <h2>Ceramic Bauble Painting</h2>
+        <p class="meta">
+          Wednesday 11 December · 3pm–6pm
+        </p>
+        <p>
+          Personalise ceramic baubles with glazes and underglaze pens. Decorate
+          three or four baubles ready for firing and collection the following week.
+        </p>
+        <p class="price">£38 per person</p>
+        <a
+          class="button"
+          href="mailto:bookings@openeyedman.pub?subject=Booking%20Enquiry%20-%20Ceramic%20Baubles%20(11%20Dec)&body=Please%20include%20your%20name%2C%20number%20of%20guests%20and%20any%20access%20requirements."
+        >
+          Book bauble workshop (11 Dec)
+        </a>
+      </article>
+
+      <article class="card">
+        <h2>Artisan Chocolate & Truffle Crafting</h2>
+        <p class="meta">
+          Saturday 14 December · 3pm–6pm
+        </p>
+        <p>
+          Temper chocolate, roll ganache truffles and create flavoured bars using
+          local cream, honey and seasonal spices.
+        </p>
+        <p class="price">£40 per person</p>
+        <a
+          class="button"
+          href="mailto:bookings@openeyedman.pub?subject=Booking%20Enquiry%20-%20Chocolate%20Workshop%20(14%20Dec)&body=Please%20include%20your%20name%2C%20number%20of%20guests%20and%20any%20access%20requirements."
+        >
+          Book chocolate workshop (14 Dec)
+        </a>
+      </article>
+
+      <!-- Week 3 -->
+      <article class="card">
+        <h2>Natural Soap & Bath Salt Gift Sets</h2>
+        <p class="meta">
+          Wednesday 18 December · 3pm–6pm
+        </p>
+        <p>
+          Blend soothing soaps and bath salts scented with local lavender, herbs and honey.
+          Take home a three-piece self-care gift set, boxed and ribboned.
+        </p>
+        <p class="price">£38 per person</p>
+        <a
+          class="button"
+          href="mailto:bookings@openeyedman.pub?subject=Booking%20Enquiry%20-%20Soap%20and%20Bath%20Salts%20(18%20Dec)&body=Please%20include%20your%20name%2C%20number%20of%20guests%20and%20any%20access%20requirements."
+        >
+          Book soap workshop (18 Dec)
+        </a>
+      </article>
+
+      <article class="card">
+        <h2>Woodland Carving: Butter Knives & Ornaments</h2>
+        <p class="meta">
+          Saturday 21 December · 3pm–6pm
+        </p>
+        <p>
+          A gentle introduction to safe carving using locally sourced green wood.
+          Craft a butter knife or a simple hanging ornament.
+        </p>
+        <p class="price">£40 per person</p>
+        <a
+          class="button"
+          href="mailto:bookings@openeyedman.pub?subject=Booking%20Enquiry%20-%20Woodland%20Carving%20(21%20Dec)&body=Please%20include%20your%20name%2C%20number%20of%20guests%20and%20any%20access%20requirements."
+        >
+          Book carving workshop (21 Dec)
+        </a>
+      </article>
+
+      <!-- Week 4 -->
+      <article class="card">
+        <h2>Upcycled Textiles: Cosies & Keepsakes</h2>
+        <p class="meta">
+          Saturday 28 December · 3pm–6pm
+        </p>
+        <p>
+          Turn remnant tweed, wool and cotton into mug cosies, coasters or small
+          patchwork ornaments – a calm, creative afternoon between Christmas and New Year.
+        </p>
+        <p class="price">£30 per person</p>
+        <a
+          class="button"
+          href="mailto:bookings@openeyedman.pub?subject=Booking%20Enquiry%20-%20Upcycled%20Textiles%20(28%20Dec)&body=Please%20include%20your%20name%2C%20number%20of%20guests%20and%20any%20access%20requirements."
+        >
+          Book textiles workshop (28 Dec)
+        </a>
+      </article>
+
+      <article class="card">
+        <h2>No Workshop on Christmas Day</h2>
+        <p class="meta">
+          Wednesday 25 December
+        </p>
+        <p>
+          We pause our craft sessions on Christmas Day – the pub will be busy serving
+          Christmas lunch instead. You'll find the festive menu on the <a href="christmas-lunch.html">Christmas Day page</a>.
+        </p>
+      </article>
+    </div>
+
+    <p class="note" style="margin-top: 1.5rem;">
+      Over-16s only unless otherwise agreed in advance. Please let us know about any access
+      requirements when you book.
+    </p>
+
+    <p style="margin-top: 1.5rem;">
+      <a class="button secondary" href="index.html">Back to Home</a>
+    </p>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      &copy; <span id="year"></span> The Open Eyed Man · Craft workshops in your village pub.
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var yearElement = document.getElementById("year");
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</body>
+</html>
