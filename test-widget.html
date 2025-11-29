@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Widget Diagnostic Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: sans-serif; padding: 2rem; max-width: 800px; margin: 0 auto; }
+    .test { margin: 1rem 0; padding: 1rem; border: 1px solid #ccc; border-radius: 8px; }
+    .pass { background: #d4edda; }
+    .fail { background: #f8d7da; }
+    .pending { background: #fff3cd; }
+    button { padding: 0.5rem 1rem; margin: 0.25rem; cursor: pointer; }
+    #log { background: #f5f5f5; padding: 1rem; font-family: monospace; white-space: pre-wrap; max-height: 300px; overflow-y: auto; }
+  </style>
+</head>
+<body>
+  <h1>ElevenLabs Widget Diagnostics</h1>
+
+  <div class="test pending" id="test1">
+    <strong>Test 1: Widget Element Exists</strong>
+    <p id="test1-result">Checking...</p>
+  </div>
+
+  <div class="test pending" id="test2">
+    <strong>Test 2: Widget Script Loaded</strong>
+    <p id="test2-result">Checking...</p>
+  </div>
+
+  <div class="test pending" id="test3">
+    <strong>Test 3: Widget Has Shadow DOM</strong>
+    <p id="test3-result">Checking...</p>
+  </div>
+
+  <div class="test pending" id="test4">
+    <strong>Test 4: Widget Methods Available</strong>
+    <p id="test4-result">Checking...</p>
+  </div>
+
+  <h2>Manual Tests</h2>
+  <p>Click these buttons and observe what happens:</p>
+
+  <button onclick="testClick()">Test .click()</button>
+  <button onclick="testDispatchClick()">Test dispatchEvent(click)</button>
+  <button onclick="testFocus()">Test .focus()</button>
+  <button onclick="findButton()">Find Internal Button</button>
+  <button onclick="listMethods()">List Widget Methods</button>
+  <button onclick="listAttributes()">List Widget Attributes</button>
+
+  <h2>Console Log</h2>
+  <div id="log"></div>
+
+  <h2>The Widget</h2>
+  <p>The ElevenLabs widget should appear as a floating button (usually bottom-right):</p>
+
+  <!-- ElevenLabs Widget -->
+  <elevenlabs-convai agent-id="agent_7101kb8bqzrner4az2bm6svp4bqa"></elevenlabs-convai>
+  <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+
+  <script>
+    function log(msg) {
+      const logDiv = document.getElementById('log');
+      logDiv.textContent += new Date().toLocaleTimeString() + ': ' + msg + '\n';
+      logDiv.scrollTop = logDiv.scrollHeight;
+      console.log(msg);
+    }
+
+    function setTest(num, pass, msg) {
+      const el = document.getElementById('test' + num);
+      const result = document.getElementById('test' + num + '-result');
+      el.className = 'test ' + (pass ? 'pass' : 'fail');
+      result.textContent = msg;
+    }
+
+    // Run tests after widget script loads
+    setTimeout(function() {
+      log('Running diagnostics...');
+
+      // Test 1: Element exists
+      const widget = document.querySelector('elevenlabs-convai');
+      if (widget) {
+        setTest(1, true, 'Widget element found: ' + widget.tagName);
+        log('Widget element: ' + widget.outerHTML.substring(0, 100));
+      } else {
+        setTest(1, false, 'Widget element NOT found');
+        log('ERROR: No elevenlabs-convai element in DOM');
+      }
+
+      // Test 2: Script loaded (check if custom element is defined)
+      if (customElements.get('elevenlabs-convai')) {
+        setTest(2, true, 'Custom element is registered');
+        log('elevenlabs-convai custom element is defined');
+      } else {
+        setTest(2, false, 'Custom element NOT registered - script may not have loaded');
+        log('ERROR: elevenlabs-convai is not a registered custom element');
+      }
+
+      // Test 3: Shadow DOM
+      if (widget && widget.shadowRoot) {
+        setTest(3, true, 'Widget has shadow DOM');
+        log('Shadow DOM found with ' + widget.shadowRoot.childNodes.length + ' child nodes');
+      } else if (widget) {
+        setTest(3, false, 'No shadow DOM (widget may still be initializing)');
+        log('No shadow root - widget may not be fully initialized');
+      }
+
+      // Test 4: Methods
+      if (widget) {
+        const methods = [];
+        for (let key in widget) {
+          if (typeof widget[key] === 'function') {
+            methods.push(key);
+          }
+        }
+        setTest(4, methods.length > 0, 'Methods: ' + methods.slice(0, 10).join(', '));
+        log('Widget methods: ' + methods.join(', '));
+      }
+
+    }, 2000); // Wait 2 seconds for script to load
+
+    function testClick() {
+      log('Attempting .click() on widget...');
+      const widget = document.querySelector('elevenlabs-convai');
+      if (widget) {
+        try {
+          widget.click();
+          log('click() called - check if anything happened');
+        } catch(e) {
+          log('ERROR: ' + e.message);
+        }
+      } else {
+        log('Widget not found');
+      }
+    }
+
+    function testDispatchClick() {
+      log('Dispatching click event...');
+      const widget = document.querySelector('elevenlabs-convai');
+      if (widget) {
+        try {
+          widget.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+          log('Click event dispatched');
+        } catch(e) {
+          log('ERROR: ' + e.message);
+        }
+      }
+    }
+
+    function testFocus() {
+      log('Attempting .focus() on widget...');
+      const widget = document.querySelector('elevenlabs-convai');
+      if (widget) {
+        try {
+          widget.focus();
+          log('focus() called');
+        } catch(e) {
+          log('ERROR: ' + e.message);
+        }
+      }
+    }
+
+    function findButton() {
+      log('Looking for button inside widget shadow DOM...');
+      const widget = document.querySelector('elevenlabs-convai');
+      if (widget && widget.shadowRoot) {
+        const buttons = widget.shadowRoot.querySelectorAll('button');
+        log('Found ' + buttons.length + ' button(s) in shadow DOM');
+        buttons.forEach((btn, i) => {
+          log('Button ' + i + ': ' + btn.className + ' | ' + btn.textContent.substring(0, 50));
+        });
+        if (buttons.length > 0) {
+          log('Attempting to click first button...');
+          buttons[0].click();
+        }
+      } else {
+        log('No shadow DOM found');
+      }
+    }
+
+    function listMethods() {
+      const widget = document.querySelector('elevenlabs-convai');
+      if (widget) {
+        log('--- Widget Properties and Methods ---');
+        const props = Object.getOwnPropertyNames(widget);
+        log('Own properties: ' + props.join(', '));
+
+        // Check prototype
+        const proto = Object.getPrototypeOf(widget);
+        if (proto) {
+          const protoProps = Object.getOwnPropertyNames(proto);
+          log('Prototype properties: ' + protoProps.join(', '));
+        }
+      }
+    }
+
+    function listAttributes() {
+      const widget = document.querySelector('elevenlabs-convai');
+      if (widget) {
+        log('--- Widget Attributes ---');
+        for (let attr of widget.attributes) {
+          log(attr.name + ' = ' + attr.value);
+        }
+      }
+    }
+  </script>
+</body>
+</html>
