@@ -50,6 +50,18 @@
       color: var(--primary);
     }
 
+    .talk-button {
+      background: #2563eb;
+      border-color: #2563eb;
+      font-family: inherit;
+    }
+
+    .talk-button:hover,
+    .talk-button:focus {
+      background: #1d4ed8;
+      border-color: #1d4ed8;
+    }
+
     header {
       background: var(--primary);
       color: #ffffff;
@@ -324,6 +336,9 @@
         <div class="hero-actions">
           <a class="button" href="events.html">View our events</a>
           <a class="button secondary" href="#food">Explore festive menus</a>
+          <button class="button talk-button" onclick="document.querySelector('elevenlabs-convai').click();" aria-label="Talk to us using voice assistant">
+            &#127908; Talk to Us
+          </button>
         </div>
       </div>
     </section>
@@ -440,5 +455,9 @@
       }
     })();
   </script>
+
+  <!-- ElevenLabs Conversational AI Widget -->
+  <elevenlabs-convai agent-id="agent_7101kb8bqzrner4az2bm6svp4bqa"></elevenlabs-convai>
+  <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
 </html>
